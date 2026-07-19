@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Momo English：从句子基础到三大从句的温柔英语语法学习地图。" />
+    <meta name="theme-color" content="#fff9f2" />
+    <title>Momo English · 语法学习地图</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="page-texture" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+      <button class="brand route-button" type="button" data-route="home" aria-label="回到 Momo English 首页">
+        <span class="brand-mark" aria-hidden="true"><i></i><b></b><em>M</em></span>
+        <span>Momo <strong>English</strong></span>
+      </button>
+      <nav class="main-nav" aria-label="主导航">
+        <button type="button" data-route="home">学习地图</button>
+        <button type="button" data-route="stories">故事练习</button>
+        <button type="button" data-route="glossary">语法词典</button>
+      </nav>
+      <div class="header-actions">
+        <button class="partner-chip" id="partnerChip" type="button" aria-label="选择或查看学习伙伴"></button>
+        <button class="icon-button theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式"><span>Moon</span></button>
+        <button class="icon-button menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+    <div class="top-progress" aria-hidden="true"><span id="topProgressBar"></span></div>
+    <main id="main-content">
+      <section class="view home-view is-active" data-view="home">
+        <div class="hero-shell section-shell">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Momo Grammar Trail</p>
+            <h1>沿着小路，<br />把英语句子<br /><em>一块块拼起来。</em></h1>
+            <p class="hero-lead">从“谁做了什么”出发，一路认识从句。每一站都先讲人话，再看公式、套句型、拆例句、做练习。</p>
+            <div class="hero-actions">
+              <button class="button button-primary" type="button" id="continueLearning">继续下一站 <span aria-hidden="true">→</span></button>
+              <button class="button button-ghost" type="button" data-route="stories">先读一个小故事</button>
+            </div>
+            <div class="hero-meta">
+              <span><strong id="homeCompletedCount">0</strong>/8 站完成</span>
+              <span><strong id="homePatternCount">32</strong> 个生活句型</span>
+              <span>学习记录保存在本机</span>
+            </div>
+          </div>
+          <div class="hero-scene reveal" aria-label="Momo 的英语学习山谷">
+            <div class="scene-moon"></div>
+            <div class="scene-star star-one"></div>
+            <div class="scene-star star-two"></div>
+            <div class="scene-cloud cloud-one"></div>
+            <div class="scene-cloud cloud-two"></div>
+            <div class="scene-hill hill-back"></div>
+            <div class="scene-hill hill-front"></div>
+            <div class="scene-path"></div>
+            <div class="signpost"><span>START</span><i></i></div>
+            <div class="hero-pet pet-dog" aria-hidden="true">
+              <span class="pet-ear left"></span><span class="pet-ear right"></span>
+              <span class="pet-face"><i class="pet-eye left"></i><i class="pet-eye right"></i><b class="pet-nose"></b><em></em></span>
+              <span class="pet-body"><i></i></span>
+            </div>
+            <div class="floating-word word-one">because</div>
+            <div class="floating-word word-two">who</div>
+            <div class="floating-word word-three">if</div>
+          </div>
+        </div>
+        <section class="progress-ribbon">
+          <div class="section-shell ribbon-inner">
+            <div class="ribbon-title">
+              <span class="route-stamp">TRAIL</span>
+              <div><strong>你的语法旅程</strong><small id="journeyMessage">第一步：先看懂一个句子。</small></div>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="总课程进度"><span id="journeyProgress"></span></div>
+            <strong class="progress-number" id="journeyPercent">0%</strong>
+          </div>
+        </section>
+        <section class="map-section section-shell" id="learning-map">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">8 STOPS · ONE CLEAR PATH</p><h2>你的学习地图</h2></div>
+            <p>课程不用死记顺序，但沿着这条路学，会更容易看见各个语法点之间的关系。</p>
+          </div>
+          <div class="learning-map" id="learningMap"></div>
+        </section>
+        <section class="home-grid section-shell">
+          <article class="partner-home-card reveal" id="partnerHomeCard"></article>
+          <article class="story-teaser reveal">
+            <div class="teaser-copy">
+              <p class="eyebrow">STORY LAB</p>
+              <h2>从句藏在故事里，<br />找到它就算赢。</h2>
+              <p>每个故事只有 5–8 句。读完后判断句子用了哪种从句，答错也会得到温柔提示。</p>
+              <button class="text-button" type="button" data-route="stories">进入故事练习 <span>→</span></button>
+            </div>
+            <div class="story-window" aria-hidden="true">
+              <span class="window-frame"></span><span class="window-moon"></span>
+              <span class="window-cat"><i></i><b></b><em></em></span><span class="window-book"></span>
+            </div>
+          </article>
+        </section>
+        <section class="glossary-strip">
+          <div class="section-shell glossary-strip-inner">
+            <div><p class="eyebrow">PLAIN WORDS</p><h2>术语其实没那么可怕。</h2><p>主语就是主角，谓语就是主角做了什么。先听懂人话，再记名字。</p></div>
+            <div class="term-peek" id="termPeek"></div>
+            <button class="round-arrow" type="button" data-route="glossary" aria-label="查看完整语法词典">→</button>
+          </div>
+        </section>
+      </section>
+      <section class="view lesson-view" data-view="lesson" hidden>
+        <div class="lesson-top section-shell">
+          <button class="back-button" type="button" data-route="home"><span>←</span> 返回学习地图</button>
+          <div class="lesson-breadcrumb" id="lessonBreadcrumb"></div>
+        </div>
+        <article id="lessonContent"></article>
+      </section>
+      <section class="view stories-view" data-view="stories" hidden>
+        <div class="section-shell page-hero compact reveal">
+          <div><p class="eyebrow">STORY LAB</p><h1>把语法放进<br /><em>一个小故事。</em></h1><p>先完整读一遍，再去辨认从句。你会发现，语法原来是在帮故事说得更清楚。</p></div>
+          <div class="page-mascot story-mascot" aria-hidden="true"><span class="book-cover">STORY</span><span class="reading-eyes"></span></div>
+        </div>
+        <div class="section-shell story-layout">
+          <aside class="story-sidebar"><p class="sidebar-label">选择故事</p><div id="storyTabs"></div></aside>
+          <article class="story-workspace" id="storyWorkspace"></article>
+        </div>
+      </section>
+      <section class="view glossary-view" data-view="glossary" hidden>
+        <div class="section-shell page-hero compact reveal">
+          <div><p class="eyebrow">PLAIN GRAMMAR</p><h1>先讲人话，<br /><em>再记术语。</em></h1><p>这些词会在每一节课里重复出现。记不住没关系，随时回来看看。</p></div>
+          <div class="page-mascot cards-mascot" aria-hidden="true"><span>S</span><span>V</span><span>O</span></div>
+        </div>
+        <div class="section-shell glossary-grid" id="glossaryGrid"></div>
+      </section>
+    </main>
+    <aside class="speech-dock" aria-label="朗读控制">
+      <span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i></span><span id="speechStatus">朗读准备好</span>
+      <label>语速 <select id="speechRate" aria-label="朗读语速"><option value="0.72">慢</option><option value="0.9" selected>正常</option><option value="1.08">快</option></select></label>
+      <button type="button" id="stopSpeech">停止</button>
+    </aside>
+    <div class="modal-backdrop" id="partnerModal" hidden>
+      <section class="partner-modal" role="dialog" aria-modal="true" aria-labelledby="partnerTitle">
+        <button class="modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">YOUR STUDY BUDDY</p><h2 id="partnerTitle">选一位学习伙伴</h2>
+        <p>不用喂食，也不会掉心情。它只负责陪你学习、记录经验和为你鼓掌。</p>
+        <div class="partner-options">
+          <button type="button" data-choose-partner="cat"><span class="choice-pet pet-cat" aria-hidden="true"><i></i><b></b><em></em></span><strong>小猫 Luna</strong><small>安静、好奇、喜欢例句</small></button>
+          <button type="button" data-choose-partner="dog"><span class="choice-pet pet-dog-choice" aria-hidden="true"><i></i><b></b><em></em></span><strong>小狗 Momo</strong><small>热情、专注、喜欢练习</small></button>
+        </div>
+        <small class="modal-note">以后随时可以更换，经验值不会丢失。</small>
+      </section>
+    </div>
+    <div class="xp-pop" id="xpPop" aria-live="polite"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <footer class="site-footer">
+      <button class="brand route-button" type="button" data-route="home"><span class="brand-mark"><em>M</em></span><span>Momo <strong>English</strong></span></button>
+      <p>Small steps. Clear sentences. Kind practice.</p>
+      <button type="button" data-route="home">回到学习地图 ↑</button>
+    </footer>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
